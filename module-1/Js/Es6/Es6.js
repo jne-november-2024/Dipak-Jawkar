@@ -45,3 +45,60 @@ console.log(objSchool instanceof School)
 console.log(copyObj instanceof School)
 
 
+
+
+// map
+let map = new Map()
+
+map.set("name", "AAA")
+map.set("salary", 2000)
+map.set("num1", 2)
+map.set("num2", 3)
+
+
+
+console.log(map)
+
+map.delete("name")
+
+for(let val of map.keys()){
+    console.log(val)
+}
+
+for(let val of map.values()){
+    console.log(val)
+}
+
+
+map.clear()
+
+console.log(map)
+
+
+
+// set
+let set = new Set()
+
+set.add(1)
+set.add(2)
+set.add(1)
+set.add(4)
+set.add(2)
+
+console.log(set)
+
+set.delete(1)
+
+console.log(set)
+
+console.log(set.size)
+
+set.clear()
+
+console.log(set)
+
+
+
+
+
+
