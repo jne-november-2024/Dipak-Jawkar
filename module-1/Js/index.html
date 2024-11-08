@@ -7,7 +7,35 @@
     <title>Document</title>
 </head>
 
+
 <body>
+
+    <div id="bg" style="display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+        <input type="text" onchange="handleChange()" name="name" />
+        <button id="btn" draggable="true">CLICK ME !!</button>
+    </div>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("bg").style.backgroundColor = 'red'
+        }
+
+        document.querySelector("#bg").onclick = () => {
+            document.getElementById("bg").style.backgroundColor = 'green'
+        }
+
+        let btn = document.getElementById("btn")
+
+        btn.addEventListener("click", (e) => {
+            alert("ok")
+            e.stopPropagation()
+        })
+
+        const handleChange =() =>{
+            console.log("okk");
+        }
+
+
+    </script>
     <!-- callback -->
     <!-- <script src="./callbacks-js/callbackHell.js"></script> -->
     <!-- <script src="./callbacks-js/callbacks.js"></script> -->
@@ -19,10 +47,21 @@
     <!-- Objects -->
     <!-- <script src="./JavaScript-Objects/javaScriptObjects.js"></script> -->
     <!-- <script src="./JavaScript-Objects//javaScriptConstructorFunction.js"></script> -->
-     <!-- <script src="./JavaScript-Objects/javaScriptPrototype.js"></script> -->
+    <!-- <script src="./JavaScript-Objects/javaScriptPrototype.js"></script> -->
 
-     <!-- ES6 -->
-      <script src="./Es6/Es6.js"></script>
+    <!-- ES6 -->
+    <!-- <script src="./Es6/Es6.js"></script> -->
+
+    <!-- Async await -->
+    <!-- <script src="./async-await/asyncAwait.js"></script> -->
+
+
+    <!-- Hoisting & Variable Scopes -->
+    <!-- <script src="./Hoisting-VariableScopes/hoistingVariableScopes.js"> </script> -->
+    <!-- <script src="string-array/stringArray.js"></script>/\ -->
+    <!-- <script src="./Closures/closures.js"></script> -->
+    <!-- <script src="date-math fun/dateMathFun.js"></script> -->
+     <script src="./problems.js"></script>
 </body>
 
 </html>
