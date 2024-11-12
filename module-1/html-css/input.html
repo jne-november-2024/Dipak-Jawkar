@@ -1,38 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Elements</title>
 </head>
+
+<style>
+
+    /* sudo class - : and sudo element is :: */
+
+    ::selection{
+        background-color: aqua;
+        color: black;
+    }
+    .main-section{
+        padding: 100px;
+    }
+    p::first-letter{
+        font-size: 30px;
+    }
+    a:active{
+        color: aqua;
+    }
+    a:hover{
+        color: aquamarine;
+    }
+    a:visited{
+        color: blueviolet;
+    }
+    h2::after{
+        content:" *";
+        color: red;
+    }
+    ul li:first-child{
+        background-color: aqua;
+    }
+    ul li:last-child{
+        background-color: aqua;
+    }
+    ul li:nth-child(2n){
+        background-color: green;
+    }
+</style>
 <body>
-    <h1>button</h1>
-    <input type="button"  value="click here"/>
 
-    <h1>text input</h1>
-    <input type="text" id="text"/>
+    <h1>Button</h1>
+    <input type="button" value="Click Here" onclick="handleSubmit()" />
 
-    <h1>checkbox</h1>
-    <input type="checkbox" id="c1" name="c1"/>
+    <h1>Text Input</h1>
+    <input type="text" id="text" />
+
+    <h1>Checkboxes</h1>
+    <input type="checkbox" id="c1" name="c1" />
     <label for="c1">c1</label>
-    <input type="checkbox" id="c2" name="c2"/>
+    <input type="checkbox" id="c2" name="c2" />
     <label for="c2">c2</label>
-    <input type="checkbox" id="c3" name="c3"/>
+    <input type="checkbox" id="c3" name="c3" />
     <label for="c3">c3</label>
-    <input type="checkbox" id="c4" name="c4"/>
+    <input type="checkbox" id="c4" name="c4" />
     <label for="c4">c4</label>
 
+    <h1>Gender</h1>
+    <input type="radio" id="male" name="gender" value="male" />
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" />
+    <label for="female">Female</label>
 
-    <h1>checkbox</h1>
-    <input type="radio" id="male" name ="gender" value="male"/>
-    <label for="male">male</label>
-    <input type="radio" id="female"  name ="gender" value="female"/>
-    <label for="female">female</label>
+    <h1>File Input</h1>
+    <input type="file" />
 
-    <h1>file</h1>
-    <input type="file"/> 
+    <h1>Select Option</h1>
+    <select name="v1" id="v1">
+        <option value="h1">h1</option>
+        <option value="h2">h2</option>
+        <option value="h3">h3</option>
+        <option value="h4">h4</option>
+    </select>
 
-    <button id="submit">submit</button>
+    <h1>Submit Button</h1>
+
+    <h1>hello</h1>
+    <h2>hello</h2>
+    <h3>hello</h3>
+    <h4>hello</h4>
+    <h5>hello</h5>
+    <h6>hello</h6>
+
+    <!-- latter spacing  -->
+    <div style="line-height: 100px; letter-spacing: 10px;">HELLO MY NAME IS _____ !</div>
+
+    <div style="text-align: right;">HELLO MY NAME IS _____ !</div>
+    <div style="text-align: center;">HELLO MY NAME IS _____ !</div>
+    <div style="text-align: left;">HELLO MY NAME IS _____ !</div>
+
+    <span style="float: right;">hello</span>
+
+
+    <br><br>
+    <div class="main-section">
+        <h2>This is title</h2>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cumque expedita dolorum corrupti sed libero architecto doloremque, molestiae voluptatem earum veritatis minus minima, quod mollitia aliquid obcaecati at totam explicabo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tenetur pariatur, qui nam vitae ipsam necessitatibus consectetur neque voluptatem, non officia, doloribus sunt fugiat aut impedit corporis assumenda nisi eos.
+        </p>
+        <a href="https://www.google.com">Read More</a>
+        <br><br><br>
+
+        <ul>
+            <li>ABC</li>
+            <li>ABC</li>
+            <li>ABC</li>
+            <li>ABC</li>
+            <li>ABC</li>
+            <li>ABC</li>
+            <li>ABC</li>
+            <li>ABC</li>
+        </ul>
+    </div>
+   
+
+    
+
+    <div style="width: 200px; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center; ">
+        <img src="https://www.w3schools.com/cssref/paris.jpg"  alt="">
+    </div>
+
+    <button id="submit" onclick="handleSubmit()" >Submit</button>
 
 </body>
+
 </html>
