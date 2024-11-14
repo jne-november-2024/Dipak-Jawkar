@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
+</head>
+<body>
+   
+    <div class="nav">
+        <div class="logo">
+            Todo App
+        </div>
+    </div>
+
+    <div class="main-container">
+        <input type="text" class="todo-input" id="todoinput" placeholder="add new one"/>
+        <div>
+            <button class="btn-add" id="btnadd">+</button>
+        </div>
+    </div>
+
+    <div style="margin-top: 100px; color: white; display: flex; align-items: center; justify-content: center;">
+       <table id="table">
+        <tr>
+            <th>Sr No.</th>
+            <th>Todo</th>
+            <th>Delete</th>
+        </tr>
+       </table>
+    </div>
+
+    <script>
+        
+        let arr = JSON.parse(localStorage.getItem("todoarr")) || [];
+
+        document.getElementById("btnadd").onclick = () => addEle();
+        
+
+        const addEle = (isDele = false) => {
+            const text = document.getElementById("todoinput").value;
+            if (!isDele && text === "") return alert("Please enter something!");
+            
+
+            if (!isDele) {
+                arr.push(text);
+                console.log(arr);
+            }
+
+            document.getElementById("todoinput").value = "";
+            renderTable();
+        }
+
+        const renderTable = () => {
+            const table = document.getElementById("table");
+
+            const rows = table.getElementsByTagName("tr");
+
+            for (let i = rows.length - 1; i > 0; i--) table.deleteRow(i)
+
+            arr.forEach((val, index) => {
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                let td3 = document.createElement("td");
+
+                td1.innerText = index + 1; 
+                td2.innerText = val;        
+                td3.innerHTML = `Delete`;   
+
+                td3.addEventListener('click', () => deleteRow(index));
+                td3.style.cursor = "pointer"
+
+                tr.append(td1);
+                tr.append(td2);
+                tr.append(td3);
+
+                table.appendChild(tr);
+            });
+            
+            localStorage.setItem("todoarr", JSON.stringify(arr));
+
+        }
+
+        const deleteRow = (index) => {
+            if(!confirm("do you want to delete ?")) return 
+            arr = arr.filter((_, i) => i !== index);
+            console.log(arr);
+            renderTable();
+        }
+
+        renderTable();
+    </script>
+</body>
+</html>
