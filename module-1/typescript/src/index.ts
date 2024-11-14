@@ -236,3 +236,38 @@ console.log(getFirstFromArr([3, 4, 5, 7, 5]))
 
 console.log(getFirstFromArr([4, 5, 7, 5]))
 
+
+interface Pen<T>{
+    color : T
+}
+
+const penFun = <T extends Pen<any>>(name:T):T =>{
+    return name
+}
+
+console.log(penFun({color:"hello", name : "blue-pen"}))
+
+
+
+class User<T, K>{
+   private name : T
+   private password : K
+
+   constructor(name: T, password: K){
+    this.name = name
+    this.password = password
+   }
+   get getName(): T {
+    return this.name
+   }
+   get getPassword() :K{
+    return this.password
+   }
+}
+
+let user = new User("dipak jawkar", 12324443)
+
+console.log(user)
+
+
+

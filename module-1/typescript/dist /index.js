@@ -127,4 +127,25 @@ const getFirstFromArr = (arr) => {
     return (arr === null || arr === void 0 ? void 0 : arr.find((_, index) => index === 0)) || null;
 };
 console.log(getFirstFromArr(["hello", 3, 4, 5, 7, 5]));
+console.log(getFirstFromArr(["hello", 3, 4, 5, 7, 5]));
+console.log(getFirstFromArr([3, 4, 5, 7, 5]));
+console.log(getFirstFromArr([4, 5, 7, 5]));
+const penFun = (name) => {
+    return name;
+};
+console.log(penFun({ color: "hello", name: "blue-pen" }));
+class User {
+    constructor(name, password) {
+        this.name = name;
+        this.password = password;
+    }
+    get getName() {
+        return this.name;
+    }
+    get getPassword() {
+        return this.password;
+    }
+}
+let user = new User("dipak jawkar", 12324443);
+console.log(user);
 //# sourceMappingURL=index.js.map
