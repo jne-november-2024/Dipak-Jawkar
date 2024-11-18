@@ -1,0 +1,18 @@
+<%- include('../includes/header.ejs') %>
+
+<main class="page flex-c-c">
+    <h1 class="flex-c-c">
+        <div>
+            <form action="/" method="POST">
+                <input name="id" type="hidden" value="<%= edit ? data.id : null  %>"/>
+                <input name="title" class="text-field" placeholder="Enter Todo ..."  value="<%= edit ? data.title : "" %>" /> <br>
+                <input type="text" class="text-field" name="description" placeholder="Enter Desciption..."  value="<%= edit ? data.description : "" %>" /> <br>
+                <div class="flex-c-c gap10">
+                    <button type="submit" > <%= edit ? "EDIT" : "ADD"  %></button>
+                </div>
+            </form>
+        </div>
+    </h1>
+</main>
+
+<%- include('../includes/footer.ejs') %>
