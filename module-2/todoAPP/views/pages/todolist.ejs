@@ -1,0 +1,38 @@
+<%- include("../includes/header.ejs") %>
+
+
+
+<main class="flex-c-c page">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th colspan="2" style="text-align: center;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% todos.forEach(value => { %>
+                    <tr>
+                        <td><%= value.title %></td>
+                        <td><%= value.description %></td>
+                        <td>
+                            <form action="/delete/<%= value.id %>" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/edit/<%= value.id %>" method="POST">
+                                <input type="hidden" name="edit" value="true"/>
+                                <button type="submit">Edit</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<%- include("../includes/footer.ejs") %>

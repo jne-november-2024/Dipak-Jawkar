@@ -7,7 +7,27 @@ const app = express()
 
 app.use(bodyParser.urlencoded({extended : false}))
 
+// app.use((req,res)=>{
+//     res.setHeader("ContentType","text/html")
+//     res.write("<h1>hiii</h1>")
+//     res.end()
+//     // next()
+// })
+
 // app.use(express.json())
+
+// app.use("/",(req,res, next)=>{
+//     next()
+// }, (req,res, next)=>{
+//     req.user = "dipak1234"
+//     next()
+// }, (req,res, next)=>{
+//     return res.send({
+//         message:"middleware working !!",
+//         user: req.user
+//     })
+// })
+
 app.use("/add-product", (req, res, next) => {
     res.send(
       '<form action="/products" method="POST"> <input name="title"/> <input type="submit" value="add"></form>'
