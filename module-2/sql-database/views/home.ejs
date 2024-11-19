@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form action="/add/user" method="post">
+            <input name="name" placeholder="name"/>
+            <input name="email" placeholder="email">
+            <input type="password" name="password" placeholder="password" >
+            <button>Register User >></button>
+        </form>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr style="text-align: center;">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email ID</th>
+                    <th colspan="2" >Action</th>
+                </tr>
+            </thead>
+            <tbody>
+             
+                <% data.forEach(val => { %>
+                    <tr>
+                        <td> <%= val.id %>  </td>
+                        <td> <%= val.name %></td>
+                        <td> <%= val.email %></td>
+                        <form action="/delete/user" method="post">
+                            <input type="hidden" name="id" value="<%= val.id %>"/>
+                            <td><button type="submit">Remove</button></td>
+                        </form>
+                       
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

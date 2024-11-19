@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: rgb(223, 223, 223);
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            width: 10px;
+            background-color: rgb(73, 73, 73);
+            border-radius: 10px;
+        }
+    }
+
+    .flex {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    body div div {
+        height: 150px;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dotted black;
+        gap: 10px;
+    }
+
+    body div div:nth-child(3n) {
+        background-color: brown;
+        color: white;
+    }
+
+    body div div:nth-child(2n) {
+        background-color: rgb(13, 158, 0);
+        color: white;
+
+    }
+
+    .fixed {
+        z-index: 100;
+        position: fixed;
+        top: 10px;
+    }
+
+    .absolute {
+        position: absolute;
+        left: -200px;
+    }
+
+    .relative {
+        position: relative;
+        left: -200px;
+        top: 200px;
+    }
+
+    @media screen and (max-width:700px) {
+        body{
+            background-color: green;
+        }
+    }
+    .flex-1{
+        display: flex;
+    }
+</style>
+
+<body>
+
+    <div class="flex">
+        <div style="grid-column: 1/5; width: 100%;" >1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div class="relative">13</div>
+        <div>14</div>
+        <div class="absolute">15</div>
+        <div class="fixed">16</div>
+    </div>
+    <div style="height: 300vh;">
+      <div>
+    <div>
+        <div class="flex-1">
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+    </div>
+      </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.nav{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+body{
+    background-color: #2e2e2e;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todo-input{
+    outline: none;
+    width: 500px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(80, 80, 80);
+    padding: 0px 15px;
+    color: white;
+}
+.btn-add{
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+#table{
+    width: 50vw;
+    text-align: center;
+}
+
+td{
+    padding: 20px 20px;
+}
