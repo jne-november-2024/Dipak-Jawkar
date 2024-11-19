@@ -17,4 +17,5 @@ const productModel = sequelize.define("Product", {
     }
 });
 
+
 module.exports = productModel;
