@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "dipak",
+        "email": "dipak@9890",
+        "password": "12345",
+        "createdAt": "2024-11-19T10:38:59.000Z",
+        "updatedAt": "2024-11-19T10:38:59.000Z"
+    },
+    {
+        "id": 2,
+        "name": "4000",
+        "email": "as",
+        "password": "asadas",
+        "createdAt": "2024-11-19T10:39:27.000Z",
+        "updatedAt": "2024-11-19T10:39:27.000Z"
+    },
+    {
+        "id": 3,
+        "name": "asd",
+        "email": "asas",
+        "password": "as",
+        "createdAt": "2024-11-19T10:40:00.000Z",
+        "updatedAt": "2024-11-19T10:40:00.000Z"
+    }
+]
